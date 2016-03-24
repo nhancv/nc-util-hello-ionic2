@@ -31,4 +31,20 @@ $ ionic run android
 First build when checkout finished
 ```python
 $ npm install
+$ ionic serve
 ```
+
+Integrate Cordova Crosswalk plugin
+```python
+$ ionic platform add android
+$ ionic plugin add cordova-plugin-crosswalk-webview
+$ ionic build android
+
+Once build successful let you check apk file in:
+hello-ionic2/platforms/android/build/outputs/apk
+android-armv7-debug-unaligned.apk
+android-armv7-debug.apk
+android-x86-debug-unaligned.apk
+android-x86-debug.apk
+```
+
