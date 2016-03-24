@@ -1,0 +1,17 @@
+
+<ion-navbar *navbar>
+    <button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Hello Alert</ion-title>
+</ion-navbar>
+
+
+<ion-content padding class="getting-started">
+    <p>
+        <button primary menuToggle>Toggle Menu</button>
+        <button block (click)="showAlert()">Alert Example</button>
+        <button block (click)="actionSheet()">Action Sheet Example</button>
+    </p>
+
+</ion-content>
