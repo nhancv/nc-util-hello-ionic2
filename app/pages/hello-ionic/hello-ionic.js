@@ -20,14 +20,14 @@ export class HelloIonicPage {
     getMe() {
         console.log("getMe");
         var authHeader = new Headers();
-        authHeader.append('Authorization', 'Basic ' + btoa("admin:District1"));
+        authHeader.append('Authorization', 'Basic ' + btoa("admin:district"));
 
         this.http.get('https://play.dhis2.org/demo/api/me', {
                 headers: authHeader
             })
             .map(res => {
                 console.log(res);
-                return res.statusText;
+                return res._body;
             })
             .subscribe(
                 data => {

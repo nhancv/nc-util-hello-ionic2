@@ -68332,13 +68332,13 @@
 	        value: function getMe() {
 	            console.log("getMe");
 	            var authHeader = new _http.Headers();
-	            authHeader.append('Authorization', 'Basic ' + btoa("admin:District1"));
+	            authHeader.append('Authorization', 'Basic ' + btoa("admin:district"));
 
 	            this.http.get('https://play.dhis2.org/demo/api/me', {
 	                headers: authHeader
 	            }).map(function (res) {
 	                console.log(res);
-	                return res.statusText;
+	                return res._body;
 	            }).subscribe(function (data) {
 	                console.log(data);
 	            }, function (err) {
